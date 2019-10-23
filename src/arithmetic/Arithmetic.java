@@ -22,8 +22,33 @@ public class Arithmetic
      */
     public static void main(String[] args) 
     {
+         public enum Operation{PLUS,MINUS,TIMES,DIVIDE};
+         public enum Value{ONE,TWO};
+         
+         private final Operation operation;
+         private final Value value;
+         
+         public Arithmetic( Operation o,Value v)
+         {
+             this.operation = o;
+             this.value = v;
+         }
+         
+         public Operation getOperation(){
+             return operation;
+         }
+         public Value getValue(){
+             return value;
+         }
+         
+                
+                 
+                 
+    
+         
        
-        ArithmeticBase r= new ArithmeticBase();
+       
+       ArithmeticBase r= new ArithmeticBase();
         double result = r.calculate(1,2);
         System.out.println("result :" +result); 
     
